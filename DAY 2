@@ -59,6 +59,34 @@ output
 12 34
 34 is GREATER
 
+/*write a java program to get smallest of three number*/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
+	    int a = scanner.nextInt();
+	    int b = scanner.nextInt();
+	    int c = scanner.nextInt();
+	    if(a<b && a<c)
+	        System.out.print(a+" is Smaller");
+	   else  if (b<c && b<a)
+	        System.out.print(b+" is Smaller");
+	   else
+	        System.out.print(a+" is Smaller");
+	}
+
+output;
+12 34 56
+12 is Smaller
+
+
+
+
+
+
+
 
 
 
