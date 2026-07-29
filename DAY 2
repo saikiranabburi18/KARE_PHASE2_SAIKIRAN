@@ -34,8 +34,30 @@ public class Main
 Not divisible by 3 and remainder is 1
 
 
+/*i/p                o/p
+12 10              12 is Greater
+3  56               56 is grater */
 
 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
+	    int a = scanner.nextInt();
+	    int b = scanner.nextInt();
+	    if(a>b)
+	        System.out.print(a+" is GREATER");
+	   else  if (a<b)
+	        System.out.print(b+" is GREATER");
+	   else
+	        System.out.print(a+" is EQUALS TO "+b);
+	}
+}
+
+output 
+12 34
+34 is GREATER
 
 
 
