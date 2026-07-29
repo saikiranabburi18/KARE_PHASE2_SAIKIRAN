@@ -1,0 +1,14 @@
+// write a java program to check the given persons age is eligible to vote or not 
+
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        if(a>=18)
+            System.out.print("Eligible to vote");
+        else
+            System.out.print("Not eligible to vote");
+    }
+    
+}
