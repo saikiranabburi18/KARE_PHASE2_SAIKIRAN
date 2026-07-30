@@ -96,13 +96,70 @@ class Main {
 }
 
 output:
-5 7
-18
+6 12
+63
 
 
+/* write a java program to find the factors of given number */
 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
 
+        System.out.print("Enter a number: ");
+        int n = obj.nextInt();
 
+        System.out.println("Factors of " + n + " are:");
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+
+        obj.close();
+    }
+}
+output:
+Enter a number: 6
+Factors of 6 are:
+1 2 3 6 
+
+/* write a java program to find the factorial of the given number */
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int temp=1;
+        for (int i=1;i<=n;i++) {
+            temp *= i;
+        }
+            System.out.print(temp);
+
+        obj.close();
+    }
+}
+output:
+0
+1
+
+/* write a java program to
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int a=obj.nextInt();
+        int b=obj.nextInt();
+        for (int i=1;i<=b;i++) {
+            
+            System.out.print(i+"*"+a+"="+(i+i));
+        }
+    }
+}
 
 
 
