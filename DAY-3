@@ -64,6 +64,67 @@ OITPUT:
 30
 Invalid
 
+// write a java program for nth problem 
+
+import java.util.*;
+class Main {
+    public static void main (String[] args) {
+        Scanner obj = new Scanner (System.in);
+        int n=obj.nextInt();
+        for(int i=1;i<=n;i++){
+            System.out.println(i);
+        }
+    }
+}
+output :
+
+
+/*write a java program to find some of elements in the given numbers */
+
+import java.util.*;
+class Main {
+    public static void main (String[] args) {
+        Scanner obj = new Scanner (System.in);
+        int start=obj.nextInt();
+        int end=obj.nextInt();
+        int temp=0;
+        for(int i=start;i<=end;i++){
+            temp += i;
+        }
+        System.out.println(temp);
+    }
+}
+
+output:
+5 7
+18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
