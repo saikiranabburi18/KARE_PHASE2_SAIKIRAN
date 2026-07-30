@@ -26,6 +26,51 @@ OUTPUT:
 1
 CSE
 
+/*mini calculator */
+import java.util.*;
+class Main {
+    public static void main (String[] args){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        int b=obj.nextInt();
+        char c=obj.next().charAt(0);
+        switch(c)
+        
+        {
+            case '+':
+                System.out.print(a=b);
+                break;
+            case '*':
+                System.out.print(a*b);
+                break;
+            case '-':
+                System.out.print(a-b);
+                break;
+            case '/':
+                System.out.print(a/b);
+                break;
+            case '%':
+                System.out.print(a%b);
+                break;
+                default:
+                System.out.print("Invalid");
+        }
+    }
+}
+
+OITPUT:
+10
+20
+30
+Invalid
+
+
+
+
+
+
+
+
 
 
 
