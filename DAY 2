@@ -81,6 +81,235 @@ output;
 12 34 56
 12 is Smaller
 
+/* write a java program to pre and post increment and decrement*/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt(); //a=29
+		int b,c,d,e;
+		
+		 b=a++;
+		 c=--b;
+		 d=c++;
+		 e=++d;
+		 System.out.println(a + " "+ b+" "+c+" "+d+" "+e);
+			
+	}
+}
+
+OUTPUT:
+11 12 13 14 15
+12 10 11 11 11
+
+
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = a++;
+        int c = b--;
+        int d = --c;
+        int e = d++;
+        int f = e--;
+        System.out.println(f++);
+        System.out.println(a+" "+b+" "+c+" "+d+" "+e+" "+f);
+        
+    }
+}
+
+OUTPUT:
+9
+11 9 9 10 8 10
+
+/*weite a java program for if/else */
+
+public class Main{
+    public static void main(String args[]){
+        if(true)
+        System.out.println("hi");
+        else
+        System.out.println("hello");
+    }
+}
+
+OUTPUT:
+hi
+
+
+/*program for conditional statement if/else */
+
+public class Main{
+    public static void main(String args[]){
+        int n = 3;
+        if(n==4)
+        System.out.println(n+5);
+        else
+        System.out.println(n-8);
+    }
+}
+
+OUTPUT:
+-5
+
+/*program for conditional statement if/else with error */
+
+public class Main{
+    public static void main(String args[]){
+        if(2+2==4)
+        System.out.print("welcome");
+        System.out.print("update your details");
+        else
+        System.out.println(5*6/2+10);
+    }
+}
+
+OUTPUT:
+else without error
+
+/*write a java program to print weather it is even or odd */
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  scanner = new Scanner(System.in);
+		int num = scanner.nextInt();
+		if(num%2==0)
+	        System.out.println("Even");
+	    else
+	        System.out.println("Odd");
+	}
+}
+
+OUTPUT:
+2
+Even
+
+/*weather two numbers are equal */
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  scanner = new Scanner(System.in);
+		int num1 = scanner.nextInt();
+		int num2 = scanner.nextInt();
+		
+		if(num1==num2)
+	        System.out.println(num1 +"and"+ num2+ " Are Equal");
+	    else
+	        System.out.println(num1 +"and"+ num2+ " Are Not Equal");
+	}
+}
+
+OUTPUT:
+
+2 3
+2and3 Are Not Equal
+
+/*write a java program to check which num is greater from given two numbers
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  scanner = new Scanner(System.in);
+		int num1 = scanner.nextInt();
+		int num2 = scanner.nextInt();
+		
+		
+		if(num1>num2)
+	        System.out.println(num1+" IS GREATER");
+	    else if(num1<num2)
+	        System.out.println(num2+" IS GREATER");
+	}
+}
+
+OUTPUT:
+10 334
+334 IS GREATER
+
+
+/*write a java program to check the given is leap year or not*/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		if(a%400==0 ||a%4==0 && a%100!=0)
+	        System.out.println("Leap year");
+	    else
+	        System.out.println("not a leap year");
+	}
+}
+OUTPUT:
+2026
+not a leap year
+
+
+/*railway time is valid or not
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  scanner = new Scanner(System.in);
+		int hour = scanner.nextInt();
+		int min = scanner.nextInt();
+		int sec = scanner.nextInt();
+		if(hour >= 0 && hour < 24 && min >= 0 && min <= 59 && sec >= 0 && sec <= 59){
+		    System.out.println("VALID");
+		}else{
+		    System.out.println("NOT VALID");
+		}
+	}
+}
+
+OUTPUT:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
