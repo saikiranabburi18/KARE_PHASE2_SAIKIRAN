@@ -1,1 +1,47 @@
+/* base 1 pattern */
+
+class Main {
+    public static void main(String[] args) {
+        int i, row, col;
+        for(row=0; row<5; row++,System.out.println()) {
+            for(col=0; col<5; col++)
+            System.out.print("*"); }
+    }
+}
+output:
+*****
+*****
+*****
+*****
+*****
+
+/* base 2 pattern */
+
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int row,col;
+        for(row=0; row<n; row++,System.out.println()) {
+            for(col=0; col<=row; col++)
+            System.out.print("*"); }
+    }
+}
+output:
+5
+*
+**
+***
+****
+*****
+
+
+
+
+
+
+
+
 
