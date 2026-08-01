@@ -1,0 +1,93 @@
+//01
+// printing a statement
+//input                  //output
+//cse "KARE" students    cse "KARE" students
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("cse \"KARE\" students");
+	}
+}
+
+//02
+//printing new line using \n
+//input         //output
+//  \n           \n
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("\\n");
+		
+	}
+}
+
+//03
+//getting input from user
+
+//input             //output
+//20               //20
+//10               //10
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int a = obj.nextInt();
+		int b = obj.nextInt();
+		System.out.println(a);
+		System.out.println(b);
+	}
+}
+
+//04
+// printing float value
+//input          //output
+//456.78978      456.7898
+
+import java.util.*;
+class Main{
+    public static  void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        float f= sc.nextFloat();
+        System.out.println(f);
+    }
+}
+
+//05
+//printing char
+//input          //output
+//VENKATESH       V
+
+import java.util.*;
+class Main{
+    public static  void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        System.out.println("The Character at: "+ch);
+    }
+}
+
+
+//06
+// Printing a decimal for  digits
+import java.util.*;
+class Main{
+    public static  void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        float f = sc.nextFloat();
+        System.out.printf("%.2f", f);
+    }
+}
+
+//07
+  //write java program to print double input from user and printed
+import java.util.*;
+class Main{
+    public static  void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        double d = sc.nextDouble();
+        System.out.print(d);
+    }
+}
