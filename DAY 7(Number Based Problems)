@@ -1,0 +1,190 @@
+// STRONG Number
+// write a java program to check the given number is strong number or not 
+// 1. get the inout from the user n = 145
+// 2. find the factorial values  of each digit
+// 3. sum all the factorial values 1+24+120=145
+// 4. if sum==n ,print strong number
+
+145
+STRONG NUMBER
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    int d,total=0,factorial;
+	    int temp=n;
+	    while(n!=0){
+	        factorial=1;
+	        d=n%10;
+	        for(int i=1;i<=d;i++){
+	            factorial = factorial*i;
+	         }
+	         total=total+factorial;
+	        n=n/10;
+	    }
+	    if(temp==total){
+	        System.out.println("STRONG NUMBER");
+	    }else{
+	        System.out.println("NOT A STRONG NUMBER");
+	    }
+	}
+}
+
+
+// ARMSTRONG Number
+// write a java program to check the given number is armstrong number or not 
+// 1. get the inout from the user n = 153
+// 2. count the number of digits count =3 - Math.pow(basevalue,powervalue)
+// 3. separate each digit and make power  value as 3 as per count value
+// 4. find sum of all the power values 1+125+27=153
+// 5.if sum == given number thenn print armstrong number
+
+1634
+ARMSTRONG NUMBER
+153
+ARMSTRONG NUMBER
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    int d,count=0;
+	    double total=0;
+	    int temp=n;
+	    while(n!=0){
+	        n=n/10;
+	        //d=n%10;
+	        count++;
+	    }
+	    n=temp;
+	    while(n!=0){
+	        d=n%10;
+	        total=total+Math.pow(d,count);
+	        n=n/10;
+	     }
+	    if(temp==total){
+	        System.out.println("ARMSTRONG NUMBER");
+	    }else{
+	        System.out.println("NOT A ARMSTRONG NUMBER");
+	    }
+	}
+}
+
+
+// Adam Number
+// write a java program to check the given number is adam number or not 
+// 1. get the inout from the user n = 12
+// 2. find the square of the given number n*n=12*12=144
+// 3. find the reverse of the given number reverse number =21
+// 4. find the suare of reverse number = 441
+// 5.reverse the square of reverse number 
+// 6. compare square of number and square of reverse number  144==144
+// 7. if both are equal print adam number
+
+Common Examples of Adam Numbers
+Some Adam numbers up to 1000 include:
+0, 1, 2, 3, 11, 12, 13, 21, 22, 31, 101, 102, 103, 111, 112, 113, 121, 122, 201, 202, 211, 212, 221, 301, 311
+
+301
+Adam NUMBER
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    int d1,d2,ans=0,ans2=0;
+	    int square=n*n;
+	    int square2=1;
+	    while(n!=0){
+	        d1=n%10;
+	        ans=ans*10+d1;
+	        n=n/10;
+	    }
+	    square2= ans*ans;
+	    while(square2 != 0){
+	        d2=square2%10;
+	        ans2=ans2*10+d2;
+	        square2=square2/10;
+	     }
+	    if(square==ans2){
+	        System.out.println("Adam NUMBER");
+	    }else{
+	        System.out.println("NOT A Adam NUMBER");
+	    }
+	}
+}
+
+
+// AMICABLE PAIR - (220, 284)  (1184, 1210) (2620, 2924) (5020, 5564) (6232, 6368)
+// write a java program to check the given number is adam number or not 
+// 1. get the 2 NUMBERS inPut from the user n1=220;n2=284
+// 2. find the factors of n1 , find the sum of factors of n1 . s1
+// 3. find the sum of factors of n2 = s2
+// 4. compare s1==n2 && s2==n1 if conditionis true print amicable pair
+
+220 284
+Amicable NUMBER
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n1 = sc.nextInt();
+	    int n2 = sc.nextInt();
+	    int s1=0,s2=0;
+	    for(int i=1;i<=n1/2;i++){
+	       if(n1%i==0){
+	           s1=s1+i;
+	            }
+	        }
+	    for(int i =1;i<=n2/2;i++){
+	       if(n2%i==0){
+	           s2=s2+i;
+	            }
+	        }
+	    if(s1==n2 && s2==n1){
+	        System.out.println("Amicable NUMBER");
+	    }else{
+	        System.out.println("NOT A Amicable NUMBER");
+	    }
+	}
+}
+
+
+
+
+// prime number - a number which is having only 2 factors
+3
+Prime NUMBER
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n1 = sc.nextInt();
+	    int count=0;
+	    for(int i=1;i<=n1;i++){
+	       if(n1%i==0){
+	           count++;
+	           if(count>2){
+	               break;
+	           }
+	        }
+	    }
+	    if(count==2){
+	        System.out.println("Prime NUMBER");
+	    }else {
+	        System.out.println("NOT A Prime NUMBER");
+	    }	
+	}
+}
