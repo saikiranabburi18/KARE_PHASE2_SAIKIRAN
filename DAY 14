@@ -1,7 +1,7 @@
 // write a java program to find nth term of fibinocci series by using recursion
-OUTPUT:
 6
 8
+
 
 import java.util.*;
 public class Main
@@ -20,5 +20,53 @@ public class Main
 }
 
 
+//NO argument Constructor
+import java.util.*;
+public class Main {
+        Main(){
+            System.out.println("Main is started");
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+    }
+}
+// argument Constructor
+import java.util.*;
+public class Main {
+        int rn;
+        String name;
+        Main(){
+            System.out.println(name+" "+rn);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+    }
+}
 
 
+
+//output
+2 ABC
+
+import java.util.*;
+class Student{
+    int rollno;
+    String name;
+    Student(int r,String n){
+        this.rollno=r;
+        this.name=n;
+    }
+    Student (Student obj){
+        obj.rollno=2;
+    }
+    void display(){
+        System.out.println(rollno+" "+name);
+    }
+    public static void main(String args[]){
+        Student po=new Student(1,"ABC");
+        Student ps =new Student(po);
+        po.display();
+    }
+}
