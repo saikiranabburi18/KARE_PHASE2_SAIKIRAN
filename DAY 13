@@ -1,0 +1,28 @@
+//write a java programe to fine the nth term if fibinocci series by using recursion
+import java.util.*;
+public class Main {
+        static int fib(int n){
+            if(n<=1)
+                return n;
+            return fib(n-1)+fib(n-2);
+        }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int ans=fib(n);  
+        System.out.println(ans);
+
+    }
+}
+
+//NO argument Constructor
+import java.util.*;
+public class Main {
+        Main(){
+            System.out.println("Main is started");
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+    }
+}
