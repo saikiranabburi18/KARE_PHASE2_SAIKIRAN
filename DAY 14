@@ -95,3 +95,29 @@ output:  5
 7
 11
 18
+
+import java.util.*;
+class Main {
+    void print(int a,float b) {
+        System.out.println(a+" "+b);
+    }
+    void print(float b,char c) {
+        System.out.println(b+" "+c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a=sc.nextInt();
+        float b=sc.nextFloat();
+        char c=sc.next().charAt(0);
+        Main m=new Main();
+        m.print(a,b);
+        m.print(b,c);
+    }
+}
+
+output:
+5
+6
+7
+5 6.0
+6.0 7
