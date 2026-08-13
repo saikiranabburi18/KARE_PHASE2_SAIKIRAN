@@ -70,3 +70,28 @@ class Student{
         po.display();
     }
 }
+
+import java.util.*;
+class Main {
+    void add(int a,int b) {
+        System.out.println(a+b);
+    }
+    void add(int a,int b,int c) {
+        System.out.println(a+b+c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        Main m=new Main();
+        m.add(a,b);
+        m.add(a,b,c);
+    }
+}
+
+output:  5
+6
+7
+11
+18
