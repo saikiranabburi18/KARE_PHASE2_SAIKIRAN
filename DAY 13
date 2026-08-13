@@ -26,3 +26,53 @@ public class Main {
 
     }
 }
+// default Constructor
+import java.util.*;
+public class Main {
+        int rn;
+        String name;
+        Main(){
+            System.out.println(name+" "+rn);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+    }
+}
+//parametrized Constructor
+import java.util.*;
+public class Main {
+        int rn;
+        String name;
+        Main(int r,String n){
+            this.rn=r;
+            this.name=n;
+        }
+        void display(){
+            System.out.println(rn+" "+name);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main(18,"siddu");
+        obj.display();
+    }
+}
+//copy Constructor
+public class Main {
+        int rn;
+        String name;
+        Main(int r,String n){
+            this.rn=r;
+            this.name=n;
+        }
+        Main(Main obj){
+            obj.rn=25;
+        }
+        void display(){
+            System.out.println(rn+" "+name);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main(18,"siddu");
+        Main ob=new Main(obj);
+        obj.display();
+    }
+}
