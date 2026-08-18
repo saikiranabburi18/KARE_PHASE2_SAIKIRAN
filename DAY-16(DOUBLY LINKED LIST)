@@ -120,3 +120,69 @@ output:
 5 6 8 0 9 4
 3 -1
 Sum of Elements: 101
+
+// maximum element in doubly linked list //
+output:
+52 73 326 12 3 1 -1
+Maximum Of Given Elements: 326
+code:
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node previous;
+    Node(int d){
+        this.data=d;
+        this.next=null;
+        this.previous=null;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Main m=new Main();
+		int d=sc.nextInt();
+		while(d!=-1){
+		    m.insert(d);
+		    d=sc.nextInt();
+		}
+		m.maxmimum();
+	}
+	Node first;
+	void insert(int d){
+	    Node n=new Node(d);
+	    if(first==null){
+	        first=n;
+	        return;
+	    }else{
+	        Node temp = first;
+	        while(temp.next!=null){
+	            temp=temp.next;
+	        }
+	        temp.next=n;
+	        n.previous=temp;
+	    }
+	}
+	void maxmimum(){
+	    int max = Integer.MIN_VALUE;
+	    if(first==null){
+	        System.out.println("List is empty");
+	        return;
+	    }
+	    Node temp=first;
+	    while(temp!=null){
+	        if(temp.data>max)
+	            max=temp.data;
+	            temp=temp.next;
+	    }
+	    
+	    System.out.println("Maximum Of Given Elements: "+max);
+	}
+}
+
+
+
+
+
+
