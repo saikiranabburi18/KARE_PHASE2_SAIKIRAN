@@ -241,6 +241,67 @@ public class Main
 }
 
 
+//Reverse the elements in doubly linked list //
+output:
+1 2 3 4 5 -1
+Reverse Of Given Elements: 
+5 4 3 2 1 
+code:
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node previous;
+    Node(int d){
+        this.data=d;
+        this.next=null;
+        this.previous=null;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Main m=new Main();
+		int d=sc.nextInt();
+		while(d!=-1){
+		    m.insert(d);
+		    d=sc.nextInt();
+		}
+		m.reverseOrder();
+	}
+	Node first;
+	void insert(int d){
+	    Node n=new Node(d);
+	    if(first==null){
+	        first=n;
+	        return;
+	    }else{
+	        Node temp = first;
+	        while(temp.next!=null){
+	            temp=temp.next;
+	        }
+	        temp.next=n;
+	        n.previous=temp;
+	    }
+	}
+	void reverseOrder(){
+	    if(first==null){
+	        System.out.println("List is empty");
+	        return;
+	    }
+	    Node temp=first;
+	    while(temp.next!= null){
+	        temp=temp.next;
+	    }
+	    System.out.println("Reverse Of Given Elements: ");
+	    while(temp!=null){
+	            System.out.print(temp.data+" ");
+	            temp=temp.previous;
+	    }  
+	}
+}
+
 
 
 
