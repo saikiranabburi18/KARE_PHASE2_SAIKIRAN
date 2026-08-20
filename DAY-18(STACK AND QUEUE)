@@ -1,3 +1,5 @@
+// stack with array//
+
 import java.util.*;
 class Stack {
         int top;
@@ -104,6 +106,7 @@ Under flow
 Invalid4
 56 89 90 5
 Exit
+
 
 //queue with array //
 import java.util.*;
