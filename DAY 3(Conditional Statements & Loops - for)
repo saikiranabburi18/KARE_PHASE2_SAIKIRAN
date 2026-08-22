@@ -1,194 +1,506 @@
-/* switch program */
+//take two integers and check wheather the no.s are equal or not
+//C-L0-MOD2-Conditional-Challenge-1
+import java.io.*;
 import java.util.*;
-class Main {
-    public static void main (String[] args){
-        Scanner obj=new Scanner(System.in);
-        int n=obj.nextInt();
-        switch(n)
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        if(a==b){
+            System.out.println("EQUAL");
+        }
+        else{
+            System.out.println("NOT EQUAL");
+        }
+    }
+}
+
+
+//check even or odd
+//C-L0-MOD2-Conditional-Challenge-2
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if(a%2==0){
+            System.out.println("EVEN");
+        }
+        else{
+            System.out.println("ODD");
         
-        {
-            case 1:
-                System.out.print("CSE");
-                break;
-            case 2:
-                System.out.print("ECE");
-                break;
-            case 3:
-                System.out.print("EEE");
-                break;
-                default:
-                System.out.print("Invalid input");
         }
-    }
-}
-
-OUTPUT:
-1
-CSE
-
-/*mini calculator */
-import java.util.*;
-class Main {
-    public static void main (String[] args){
-        Scanner obj=new Scanner(System.in);
-        int a=obj.nextInt();
-        int b=obj.nextInt();
-        char c=obj.next().charAt(0);
-        switch(c)
         
-        {
-            case '+':
-                System.out.print(a=b);
-                break;
-            case '*':
-                System.out.print(a*b);
-                break;
-            case '-':
-                System.out.print(a-b);
-                break;
-            case '/':
-                System.out.print(a/b);
-                break;
-            case '%':
-                System.out.print(a%b);
-                break;
-                default:
-                System.out.print("Invalid");
-        }
     }
 }
 
-OITPUT:
-10
-20
-30
-Invalid
-
-// write a java program for nth problem 
-
+//positive or negative
+//C-L0-MOD2-Conditional-Challenge-3
+import java.io.*;
 import java.util.*;
-class Main {
-    public static void main (String[] args) {
-        Scanner obj = new Scanner (System.in);
-        int n=obj.nextInt();
-        for(int i=1;i<=n;i++){
-            System.out.println(i);
-        }
-    }
-}
-output :
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
+public class Solution {
 
-/*write a java program to find some of elements in the given numbers */
-
-import java.util.*;
-class Main {
-    public static void main (String[] args) {
-        Scanner obj = new Scanner (System.in);
-        int start=obj.nextInt();
-        int end=obj.nextInt();
-        int temp=0;
-        for(int i=start;i<=end;i++){
-            temp += i;
-        }
-        System.out.println(temp);
-    }
-}
-
-output:
-6 12
-63
-
-
-/* write a java program to find the factors of given number */
-
-import java.util.*;
-public class Main {
     public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-
-        System.out.print("Enter a number: ");
-        int n = obj.nextInt();
-
-        System.out.println("Factors of " + n + " are:");
-
-        for (int i = 1; i <= n; i++) {
-            if (n % i == 0) {
-                System.out.print(i + " ");
-            }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if(a>0){
+            System.out.println("Positive");
         }
-
-        obj.close();
+        else if(a<0){
+            System.out.println("Negative");
+        }
+        else{
+            System.out.println("Zero");
+        
+        }
     }
 }
-output:
-Enter a number: 6
-Factors of 6 are:
-1 2 3 6 
 
-/* write a java program to find the factorial of the given number */
-
+//Write a java program to check the number is divisible by 3 or not using conditional construct.
+//C-L0-MOD2-Conditional-Challenge-4
+import java.io.*;
 import java.util.*;
-public class Main {
-    public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-        int n = obj.nextInt();
-        int temp=1;
-        for (int i=1;i<=n;i++) {
-            temp *= i;
-        }
-            System.out.print(temp);
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-        obj.close();
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if(a%3==0){
+            System.out.println("The number is divisible by 3");
+        }
+        else{
+            System.out.println("The number is not divisible by 3 and gives a remainder "+a%3);
+        
+        }
     }
 }
-output:
-0
-1
-
-/* write a java program to
-
+//Write a java program to check the number is either divisible by 3 or divisible by 5 and display the corresponding message
+//C-L0-MOD2-Conditional-Challenge-5
+import java.io.*;
 import java.util.*;
-public class Main {
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
     public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-        int a=obj.nextInt();
-        int b=obj.nextInt();
-        for (int i=1;i<=b;i++) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner  scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        if(a%3==0 && a%5==0)
+            System.out.println("HiHello");
+        else if(a%3==0)
+            System.out.println("Hi");
+        else if(a%5==0)
+            System.out.println("Hello");
+    }
+}
+
+//Write a JAVA program to check whether the given year is leap year or not using conditional construct
+//C-L0-MOD2-Conditional-Challenge-6
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner  scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        if(a%400==0 ||a%4==0 && a%100!=0)
+            System.out.println("Leap year");
+        else
+            System.out.println("Not a Leap year");
+    }
+}
+
+//Write a program to check whether the time is valid or not using conditional construct.
+//Input Format
+//hh:mm:ss
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner  sc = new Scanner(System.in);
+        sc.useDelimiter("[:\\r\\n]+");
+        int hour = sc.nextInt();
+        int min = sc.nextInt();
+        int sec = sc.nextInt();
+        if(hour >= 0 && hour < 24 && min >= 0 && min <= 59 && sec >= 0 && sec <= 59){
+            System.out.println("Valid");
+        }else{
+            System.out.println("Not Valid");
+        }
+    }
+}
+
+//Write a program to find given a specific date ,check whether the date is valid or not. Year will be in range 1900 to 9999
+//Input Format
+//dd/mm/yy
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc =new Scanner(System.in);
+        sc.useDelimiter("[/\\r\\n]+");
+        int date = sc.nextInt();
+        int month = sc.nextInt();
+        int year = sc.nextInt();
+        
+        // Simple if-else validation
+        if (date >= 1 && date < 31 && month >= 1 && month <= 12 &&month!=2 && year >= 1900 && year <= 9999) {
+            System.out.println("Valid");
+        } else {
+            System.out.println("Invalid");
+        }
+        if (date >= 1 && date < 29 && month == 2 && year >= 1900 && year <= 9999){
             
-            System.out.print(i+"*"+a+"="+(i+i));
+            System.out.println("Valid");
         }
+        else if(date >= 1 && date > 29 && month == 2 && year >= 1900 && year <= 9999){
+            System.out.println("Invalid");
+        }
+        
+    }
+}
+/*
+Write a program to print corresponding day based on given input
+
+Input Format
+
+Accept an integer as an input
+
+Constraints
+
+NIL
+
+Output Format
+
+Print corresponding day or Invalid
+
+*/
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc =new Scanner(System.in);
+        int a=sc.nextInt();
+        switch(a){
+            case 0:
+            System.out.println("Sunday");
+            break;
+            case 1:
+            System.out.println("Monday");
+            break;
+            case 2:
+            System.out.println("Tuesday");
+            break;
+            case 3:
+            System.out.println("Wednesday");
+            break;
+            case 4:
+            System.out.println("Thursday");
+            break;
+            case 5:
+            System.out.println("Friday");
+            break;
+            case 6:
+            System.out.println("Saturday");
+            break;
+            
+            default:
+            System.out.println("Invalid");
+        }
+        
+        
+    }
+}
+/*
+Write a program to print the respective month name based on given input
+
+Input Format
+
+Accept an integer as an input
+
+Constraints
+
+NIL
+
+Output Format
+
+Print the respective month or Invalid
+*/
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc =new Scanner(System.in);
+        int a=sc.nextInt();
+        switch(a){
+            case 1:
+            System.out.println("January");
+            break;
+            case 2:
+            System.out.println("Febuary");
+            break;
+            case 3:
+            System.out.println("March");
+            break;
+            case 4:
+            System.out.println("April");
+            break;
+            case 5:
+            System.out.println("May");
+            break;
+            case 6:
+            System.out.println("June");
+            break;
+            case 7:
+            System.out.println("July");
+            break;
+            case 8:
+            System.out.println("August");
+            break;
+            case 9:
+            System.out.println("September");
+            break;
+            case 10:
+            System.out.println("October");
+            break;
+            case 11:
+            System.out.println("November");
+            break;
+            case 12:
+            System.out.println("December");
+            break;
+            
+            default:
+            System.out.println("Invalid");
+        }
+        
+        
     }
 }
 
+//question
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc =new Scanner(System.in);
+        int a=sc.nextInt();
+        switch(a){
+            case 1:
+            System.out.println("CSE");
+            break;
+            case 2:
+            System.out.println("ECE");
+            break;
+            case 3:
+            System.out.println("EEE");
+            break;
+            default:
+            System.out.println("Invalid");
+        }
+        
+        
+    }
+}
+
+//calculator using switch
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc =new Scanner(System.in);
+        int a=sc.nextInt();
+        char c=sc.next().charAt(0);
+        int b=sc.nextInt();
+        
+        switch(c){
+            case '+':
+                System.out.println(a+b);
+            break;
+            case '-':
+                System.out.println(a-b);
+            break;
+            case '/':
+                if(b==0)
+                System.out.println("undefined");
+                else
+                System.out.println(a/b);
+            break;
+            case '*':
+                System.out.println(a*b);
+            break;
+            case '%':
+                System.out.println(a%b);
+            break; 
+            default:
+            System.out.println("Invalid");
+        }
+        
+        
+    }
+}
+
+//print n natural numbers
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+		    System.out.println(i);
+		}
+	}
+}
+
+//write a java program to find the sum of elements in the given range
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int start=sc.nextInt();
+		int end=sc.nextInt();
+		int temp=0;
+		for(int i=start;i<=end;i++){
+		    temp += i;
+		}
+		System.out.println(temp);
+	}
+}
 
 
+//write a java program to find the facrors of given number
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+		    if(n%i==0){
+		        System.out.println(i);
+		    }
+		}
+	}
+}
 
+//..........
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int temp=1;
+		for(int i=1;i<=n;i++){
+		    temp *= i;
+		}
+		System.out.println(temp);
+		
+	}
+}
 
+/*i/p           o/p
+2  3            1*2=2
+                2*2=2
+                3*2=6
 
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		for(int i=1;i<=b;i++){
+		
+		System.out.println(i+"*"+a+"="+(i*a));
+		}
+	}
+}
+/*i/p           o/p
+2  3            1*2=2
+                2*2=2
+                3*2=6
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int temp=0;
+		for(int i=1;i<=b;i++){
+		temp+=a;
+		System.out.println(i+"*"+a+"="+(temp));
+		}
+	}
+}
