@@ -71,53 +71,255 @@ class Student{
     }
 }
 
+//output
+10 20  30
+30
+60
+
 import java.util.*;
-class Main {
-    void add(int a,int b) {
+class Main{
+    void add(int a,int b){
         System.out.println(a+b);
     }
-    void add(int a,int b,int c) {
+    void add(int a,int b,int c){
         System.out.println(a+b+c);
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a=sc.nextInt();
-        int b=sc.nextInt();
-        int c=sc.nextInt();
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        int b=obj.nextInt();
+        int c=obj.nextInt();
         Main m=new Main();
         m.add(a,b);
         m.add(a,b,c);
-    }
+        
+    } 
 }
 
-output:  5
-6
-7
-11
-18
+//output
+20 6.66 v
+20 6.66
+6.66 v
 
 import java.util.*;
-class Main {
-    void print(int a,float b) {
+class Main{
+    void add(int a,float b){
         System.out.println(a+" "+b);
     }
-    void print(float b,char c) {
+    void add(float b,char c){
         System.out.println(b+" "+c);
     }
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        float b=obj.nextFloat();
+        char c=obj.next().charAt(0);
+        Main m=new Main();
+        m.add(a,b);
+        m.add(b,c);
+        
+    } 
+}
+
+
+//output
+30 6.666
+30 6.666
+6.666 30
+
+import java.util.*;
+class Main{
+    void add(int a,float b){
+        System.out.println(a+" "+b);
+    }
+    void add(float b,int a){
+        System.out.println(b+" "+a);
+    }
+    
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        float b=obj.nextFloat();
+        Main m=new Main();
+        m.add(a,b);
+        m.add(b,a);
+        
+    } 
+}
+
+
+//output
+4 6.66 v 3.3333
+4 6.66
+4 6.66
+v 3.3333
+3.3333 v
+
+import java.util.*;
+class Main{
+    void add(int a,float b){
+        System.out.println(a+" "+b);
+    }
+    void add(float a,int b){
+        System.out.println(b+" "+a);
+    }
+    void print(char c, double d){
+        System.out.println(c+" "+d);
+    }
+    void print(double c,char d){
+        System.out.println(c+" "+d);
+    }
+    
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        float b=obj.nextFloat();
+        char c=obj.next().charAt(0);
+        double d=obj.nextDouble();
+        Main m=new Main();
+        m.add(a,b);
+        m.add(b,a);
+        m.print(c,d);
+        m.print(d,c);
+        
+    } 
+}
+
+// 1) Recursion - Power of a Number
+// Input:
+// 2 5
+// Output:
+// 32
+
+import java.util.*;
+
+public class Main
+{
+    static int power(int a, int b){
+        if(b == 0)
+            return 1;
+
+        return a * power(a, b - 1);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a=sc.nextInt();
-        float b=sc.nextFloat();
-        char c=sc.next().charAt(0);
-        Main m=new Main();
-        m.print(a,b);
-        m.print(b,c);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println(power(a, b));
     }
 }
 
-output:
-5
-6
-7
-5 6.0
-6.0 7
+
+// 2) Constructor Overloading
+// Output:
+// 10
+// 20 ABC
+// 30 XYZ 6.5
+
+import java.util.*;
+
+class Student
+{
+    int rollno;
+    String name;
+    double mark;
+
+    Student(){
+        rollno = 10;
+    }
+
+    Student(int r, String n){
+        rollno = r;
+        name = n;
+    }
+
+    Student(int r, String n, double m){
+        rollno = r;
+        name = n;
+        mark = m;
+    }
+
+    void display(){
+        System.out.println(rollno + " " + name + " " + mark);
+    }
+
+    public static void main(String args[]){
+        Student s1 = new Student();
+        Student s2 = new Student(20, "ABC");
+        Student s3 = new Student(30, "XYZ", 6.5);
+
+        System.out.println(s1.rollno);
+        System.out.println(s2.rollno + " " + s2.name);
+        s3.display();
+    }
+}
+
+
+// 3) Method Overloading
+// Input:
+// 10 20 30
+// Output:
+// 30
+// 200
+// 60
+
+import java.util.*;
+
+class Main
+{
+    void calculate(int a, int b){
+        System.out.println(a + b);
+    }
+
+    void calculate(float a, float b){
+        System.out.println(a * b);
+    }
+
+    void calculate(int a, int b, int c){
+        System.out.println(a + b + c);
+    }
+
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        Main m = new Main();
+
+        m.calculate(a, b);
+        m.calculate((float)a, (float)b);
+        m.calculate(a, b, c);
+    }
+}
+
+
+// 4) Recursion - Sum of Digits
+// Input:
+// 12345
+// Output:
+// 15
+
+import java.util.*;
+
+public class Main
+{
+    static int sum(int n){
+        if(n == 0)
+            return 0;
+
+        return (n % 10) + sum(n / 10);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        System.out.println(sum(n));
+    }
+}
