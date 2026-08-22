@@ -31,160 +31,304 @@ public class Main
 	    }else{
 	        System.out.println("NOT A STRONG NUMBER");
 	    }
+		
+	}
+}
+
+//  Armstrong number
+// step 1 : get a input from user n=153
+// step 2 : count the number of digit - count=3
+// step 3 : separate each digit and make the power value is 3 as per count value
+// step 4 : sum all the power values 1+125+27=153
+//step 5 : if sum == given number print armstrong number
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		int n = sc.nextInt();
+		int temp=n,d,count=0,sum=0;
+		while(n!=0){
+		    d=n%10;
+		    count++;
+		    n=n/10;
+		}
+		n=temp;
+		while(n!=0){
+		    d=n%10;
+		    int a=(int)Math.pow(d,count);
+		    sum=sum+a;
+		    n=n/10;
+		}
+		if(temp==sum){
+		    System.out.println("ARMSTRONG NUMBER");
+		   
+		}
+		else{
+		    System.out.println("NOT A ARMSTRONG NUMBER");
+		}
 	}
 }
 
 
-// ARMSTRONG Number
-// write a java program to check the given number is armstrong number or not 
-// 1. get the inout from the user n = 153
-// 2. count the number of digits count =3 - Math.pow(basevalue,powervalue)
-// 3. separate each digit and make power  value as 3 as per count value
-// 4. find sum of all the power values 1+125+27=153
-// 5.if sum == given number thenn print armstrong number
+//  Adam number
+// step 1 : get a input from user n=12
+// step 2 : find the square of the given number sqr=144
+// step 3 : find the reverse of given number rn=21
+// step 4 : find the square of reverse number srn=441
+// step 5 : reverse the square of reverse number rsrn=144
+// step 6 : if sqr==rsrn print("ADAM number")
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		int n = sc.nextInt();
+		int sqr=n*n;
+		int d,rn=0,srn,rsrn=0;
+		while(n!=0){
+		    d=n%10;
+		    rn=rn*10+d;
+		    n=n/10;
+		}
+		
+		 srn=rn*rn;
+		 while(srn!=0){
+		    d=srn%10;
+		    rsrn=rsrn*10+d;
+		    srn=srn/10;
+		}
+		if(sqr==rsrn){
+		    System.out.println("ADAM NUMBER");
+		}else{
+		    System.out.println("NOT AN ADAM NUMBER");
+		}
+		
+	}
+}
 
-1634
-ARMSTRONG NUMBER
-153
-ARMSTRONG NUMBER
+
+//  Amicable pair(220,284),(1184,1210)
+// step 1 : get two input from user n1=220 and n2=284
+// step 2 : s1=find the sum of factors of n1
+// step 3 : s2=find the sum of factors of n2
+// step 4 : compare s1==n2 and s2==n1
+// step 5 : if the condition is true print amicable pair
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+        int s1=0,s2=0;
+        for(int i=1;i<n1;i++){
+            if(n1%i==0){
+                s1=s1+i;
+            }
+        }
+        for(int i=1;i<n2;i++){
+            if(n2%i==0){
+                s2=s2+i;
+            }
+        }
+        if(s1==n2 && s2==n1){
+            System.out.println("Amicable pair");
+        }else{
+            System.out.println("Not an Amicable pair");
+            
+        }
+        
+		
+	}
+}
+
+
+//  prime number - A number which has only 2 factors
 
 import java.util.*;
 public class Main
 {
 	public static void main(String[] args) {
-	    Scanner sc = new Scanner(System.in);
-	    int n = sc.nextInt();
-	    int d,count=0;
-	    double total=0;
-	    int temp=n;
-	    while(n!=0){
-	        n=n/10;
-	        //d=n%10;
-	        count++;
-	    }
-	    n=temp;
-	    while(n!=0){
-	        d=n%10;
-	        total=total+Math.pow(d,count);
-	        n=n/10;
-	     }
-	    if(temp==total){
-	        System.out.println("ARMSTRONG NUMBER");
-	    }else{
-	        System.out.println("NOT A ARMSTRONG NUMBER");
-	    }
+		Scanner sc =new Scanner(System.in);
+		int n = sc.nextInt();
+        int count=0;
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                count++;
+                if(count>2){
+                    break;
+                }
+            }
+        }if(count==2){
+            System.out.println("PRIME NUMBER");
+        }
+        else{
+            System.out.println("NOT A PRIME NUMBER");
+        }
+		
 	}
+}
+// 1) PALINDROME NUMBER
+// Write a Java program to check whether the given number is a palindrome or not.
+// Input: 121
+// Reverse = 121
+// Output: PALINDROME NUMBER
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp = n;
+        int d, reverse = 0;
+
+        while(n != 0) {
+            d = n % 10;
+            reverse = reverse * 10 + d;
+            n = n / 10;
+        }
+
+        if(temp == reverse) {
+            System.out.println("PALINDROME NUMBER");
+        } else {
+            System.out.println("NOT A PALINDROME NUMBER");
+        }
+    }
 }
 
 
-// Adam Number
-// write a java program to check the given number is adam number or not 
-// 1. get the inout from the user n = 12
-// 2. find the square of the given number n*n=12*12=144
-// 3. find the reverse of the given number reverse number =21
-// 4. find the suare of reverse number = 441
-// 5.reverse the square of reverse number 
-// 6. compare square of number and square of reverse number  144==144
-// 7. if both are equal print adam number
-
-Common Examples of Adam Numbers
-Some Adam numbers up to 1000 include:
-0, 1, 2, 3, 11, 12, 13, 21, 22, 31, 101, 102, 103, 111, 112, 113, 121, 122, 201, 202, 211, 212, 221, 301, 311
-
-301
-Adam NUMBER
+// 2) NEON NUMBER
+// Write a Java program to check whether the given number is a neon number or not.
+// Input: 9
+// Square = 81
+// Sum of digits = 8 + 1 = 9
+// Output: NEON NUMBER
 
 import java.util.*;
+
 public class Main
 {
-	public static void main(String[] args) {
-	    Scanner sc = new Scanner(System.in);
-	    int n = sc.nextInt();
-	    int d1,d2,ans=0,ans2=0;
-	    int square=n*n;
-	    int square2=1;
-	    while(n!=0){
-	        d1=n%10;
-	        ans=ans*10+d1;
-	        n=n/10;
-	    }
-	    square2= ans*ans;
-	    while(square2 != 0){
-	        d2=square2%10;
-	        ans2=ans2*10+d2;
-	        square2=square2/10;
-	     }
-	    if(square==ans2){
-	        System.out.println("Adam NUMBER");
-	    }else{
-	        System.out.println("NOT A Adam NUMBER");
-	    }
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp = n;
+        int square = n * n;
+        int d, sum = 0;
+
+        while(square != 0) {
+            d = square % 10;
+            sum = sum + d;
+            square = square / 10;
+        }
+
+        if(temp == sum) {
+            System.out.println("NEON NUMBER");
+        } else {
+            System.out.println("NOT A NEON NUMBER");
+        }
+    }
 }
 
 
-// AMICABLE PAIR - (220, 284)  (1184, 1210) (2620, 2924) (5020, 5564) (6232, 6368)
-// write a java program to check the given number is adam number or not 
-// 1. get the 2 NUMBERS inPut from the user n1=220;n2=284
-// 2. find the factors of n1 , find the sum of factors of n1 . s1
-// 3. find the sum of factors of n2 = s2
-// 4. compare s1==n2 && s2==n1 if conditionis true print amicable pair
-
-220 284
-Amicable NUMBER
+// 3) PERFECT NUMBER
+// Write a Java program to check whether the given number is a perfect number or not.
+// Input: 28
+// Factors = 1 + 2 + 4 + 7 + 14 = 28
+// Output: PERFECT NUMBER
 
 import java.util.*;
+
 public class Main
 {
-	public static void main(String[] args) {
-	    Scanner sc = new Scanner(System.in);
-	    int n1 = sc.nextInt();
-	    int n2 = sc.nextInt();
-	    int s1=0,s2=0;
-	    for(int i=1;i<=n1/2;i++){
-	       if(n1%i==0){
-	           s1=s1+i;
-	            }
-	        }
-	    for(int i =1;i<=n2/2;i++){
-	       if(n2%i==0){
-	           s2=s2+i;
-	            }
-	        }
-	    if(s1==n2 && s2==n1){
-	        System.out.println("Amicable NUMBER");
-	    }else{
-	        System.out.println("NOT A Amicable NUMBER");
-	    }
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = 0;
+
+        for(int i = 1; i < n; i++) {
+            if(n % i == 0) {
+                sum = sum + i;
+            }
+        }
+
+        if(sum == n) {
+            System.out.println("PERFECT NUMBER");
+        } else {
+            System.out.println("NOT A PERFECT NUMBER");
+        }
+    }
 }
 
 
-
-
-// prime number - a number which is having only 2 factors
-3
-Prime NUMBER
+// 4) HARSHAD NUMBER
+// Write a Java program to check whether the given number is a Harshad number or not.
+// Input: 18
+// Sum of digits = 1 + 8 = 9
+// 18 % 9 = 0
+// Output: HARSHAD NUMBER
 
 import java.util.*;
+
 public class Main
 {
-	public static void main(String[] args) {
-	    Scanner sc = new Scanner(System.in);
-	    int n1 = sc.nextInt();
-	    int count=0;
-	    for(int i=1;i<=n1;i++){
-	       if(n1%i==0){
-	           count++;
-	           if(count>2){
-	               break;
-	           }
-	        }
-	    }
-	    if(count==2){
-	        System.out.println("Prime NUMBER");
-	    }else {
-	        System.out.println("NOT A Prime NUMBER");
-	    }	
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp = n;
+        int d, sum = 0;
+
+        while(n != 0) {
+            d = n % 10;
+            sum = sum + d;
+            n = n / 10;
+        }
+
+        if(temp % sum == 0) {
+            System.out.println("HARSHAD NUMBER");
+        } else {
+            System.out.println("NOT A HARSHAD NUMBER");
+        }
+    }
+}
+
+
+// 5) AUTOMORPHIC NUMBER
+// Write a Java program to check whether the given number is an automorphic number or not.
+// Input: 25
+// Square = 625
+// Last digits of square = 25
+// Output: AUTOMORPHIC NUMBER
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp = n;
+        int square = n * n;
+        int d1 = 0, d2 = 0;
+
+        while(n != 0) {
+            d1++;
+            n = n / 10;
+        }
+
+        int power = 1;
+        for(int i = 1; i <= d1; i++) {
+            power = power * 10;
+        }
+
+        d2 = square % power;
+
+        if(temp == d2) {
+            System.out.println("AUTOMORPHIC NUMBER");
+        } else {
+            System.out.println("NOT AN AUTOMORPHIC NUMBER");
+        }
+    }
 }
