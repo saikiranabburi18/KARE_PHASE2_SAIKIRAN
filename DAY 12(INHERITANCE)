@@ -1,461 +1,433 @@
-inheritance concept using extends keyword
-import java.util.*;
-public class Main
+class Father
 {
-	public static void main(String[] args) {
-        //single inheritance
-        //multi inheritance
-        //hybrid inheritance
-        //lets take three classes
-        Son sn = new Son();
-        sn.gen1();
-        sn.gen2();
-        sn.gen3();
-        Father fa = new Father();
-        fa.gen1();
-        fa.gen2();
-        Grandfather gf=new Grandfather();
-       gf.gen1();
-        
-	}
-	 //father
-	 static class Grandfather{
-	     void gen1(){
-	         System.out.print("Money\n");
-	     }
-	 }
-	static class Father extends Grandfather{
-	    void gen2(){
-	        System.out.print("Gold\n");
-	    }
-	}
-	static class Son extends Father{
-	    void gen3(){
-	        System.out.print("Diamond\n");
-	    }
-	}
-}
-
-outpt:
-Money
-Gold
-Diamond
-Money
-Gold
-Money
-
-import java.util.*;
-public class Main
-{
-	public static void main(String[] args) {
-        //single inheritance
-        //multi inheritance
-        //hybrid inheritance
-        //lets take three classes
-        Son sn = new Son();
-        sn.gen31();
-        sn.gen2();
-        Daughter Dh=new Daughter();
-        Dh.gen2();
-        Dh.gen3();
-        Father Fa=new Father();
-        Fa.gen2();
-        
-	}
-	 //father
-	 static class Father{
-	     void gen2(){//we can have a same method in separate classes
-	         System.out.print("Gold");
-	     }
-	 }
-	static class Son extends Father{
-	    void gen31(){
-	        System.out.print("Diamond\n");
-	    }
-	}
-	static class Daughter extends Father{
-	    void gen3(){
-	        System.out.print("Platinum\n");
-	    }
-	}
-}
-
-Diamond
-GoldGoldPlatinum
-Gold
-
-import java.util.*;
-class GrandFather{
-    void gen1(){
-        System.out.print("Money\n");
-    }
-}
-class Father extends GrandFather{
-    void gen21(){
-        System.out.print("GOld\n");
-    }
-}
-class Mother extends Father{
-    void gen22(){
-        System.out.print("Silver\n");
+    void gen2(){
+        System.out.println("Gold");
     }
 }
 class Son extends Father{
     void gen3(){
-        System.out.print("Diamond\n");
+        System.out.println("Diamond");
     }
 }
-public class Main
-{
-	public static void main(String[] args) {
-        Son s= new Son();
-        s.gen1();
-        s.gen21();
+class Main{
+    public static void main(String args[]){
+        Son s=new Son();
+        Father f=new Father();
+        f.gen2();
+       // f.gen3(); not accessible
+        s.gen2();
         s.gen3();
-        Mother m=new Mother();
-        m.gen22();
-	}
+    }
+} 
+
+
+class GrandFather{
+    void gen1(){
+        System.out.println("Cash/Money");
+    }
 }
 
-Money
-GOld
-Diamond
-Silver
-
-//Wjp to check a specific number is perfect square of not by using function with no argument no return type
-import java.util.*;
-public class Main
+class Father extends GrandFather
 {
-    
-    static void ps(){
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int flag=0,i;
-        for(i=1;i<=n/2;i++){
-            if(i*i==n){
-                flag=1;
-                System.out.print("Perfect Number");
-                break;
-            }
-            }
-            if(flag==0){
-                System.out.print("Not a perfect square");
-        }
+    void gen2(){
+        System.out.println("Gold");
     }
-	public static void main(String[] args) {
-    
-    ps();
-	}
 }
-outpuy:
-9
-Perfect Number
+class Son extends Father{
+    void gen3(){
+        System.out.println("Diamond");
+    }
+}
+class Main{
+    public static void main(String args[]){
+        Son s=new Son();
+        Father f=new Father();
+        GrandFather GF=new GrandFather();
+        GF.gen1();
+        f.gen2();
+        s.gen1();
+        s.gen2();
+        s.gen3();
+    }
+} 
+// 1) Single Inheritance
 
-
-//Wjp to check a number is power of 2 or not 
-//with parameter and no return type
-
-import java.util.*;
-public class Main
+class Animal
 {
-    
-    static void powerof2(int a){//variable name can be changed what ever we want but datatype must be same
-        while(a%2==0){
-            a=a/2;
-        }
-        if(a==1){
-            System.out.println("Its a power of 2");
-        }else{
-            System.out.println("Not a power of 2");
-        }
-        
+    void eat(){
+        System.out.println("Eating");
     }
-	public static void main(String[] args) {
-    Scanner sc=new Scanner(System.in);
-    //int n=sc.nextInt();//if we want we pass by user input
-    powerof2(4);
-    powerof2(8);
-    powerof2(16);
-    powerof2(89);
-    
-	}
 }
-/*
-2^0=1
-2^1=2 2/2=1
-2^3 =8 8/2=4 4/2=2 2/2=1
-2^4 =16 16/2=8 8/2=4 4/2=2 2/2=1
-at last remainder should be always 1;
-*/
-Its a power of 2
-Its a power of 2
-Its a power of 2
-Not a power of 2
 
-/*//automorphic number
-get input user n=5;
-find square of value
-to count number of digits
-to find power of the value pow(value,power value)
-square%power==n then this is automorphic number 
-else not a automorphic number 
-*/
-import java.util.*;
-public class Main
+class Dog extends Animal
 {
-    boolean  Automorphic(){
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int squ=n*n;
-        int temp=n;
-        int count=0;
-        while(n!=0){
-            n=n/10;
-            count++;
-            
-        }int pow=(int)Math.pow(10,count);
-        if(squ%pow==temp){
-            return true;
-        }else{
-            return false;
-        }
-    }
-    
-	public static void main(String[] args) {
-    Main n=new Main();
-    boolean ans=n.Automorphic();
-    if(ans){
-        System.out.print("Automorphic number");
-        return;
-    }
-    System.out.print("Not an Automorphic number");
-	}
-}
-output:
-8
-Not an Automorphic number
-
-/*
-WJP to checkperfect cube or not 
-*/
-import java.util.*;
- 
-    
-public class Main{
-    boolean  perfectcube(int n){
-        for(int i=0;i<=n/2;i++){
-            if(i*i*i==n){
-                return true;
-            }
-        }
-       return false;
-        }
-       
-	public static void main(String[] args) {
-    Main n=new Main();
-    Scanner sc=new Scanner(System.in);
-    int m=sc.nextInt();
-    boolean ans=n.perfectcube(m);
-    if(ans){
-        System.out.print("Perfect cube");
-    }else{
-        System.out.print("Not a perfect number");
-    }
+    void bark(){
+        System.out.println("Barking");
     }
 }
-output:
-13
-Not a perfect number
 
-/*find average for only the values
-even and divisble by 3
-5
-2 4 6 18 24
-*/
-import java.util.*;
- 
-    
-public class Main{
-	public static void main(String[] args) {
-	    Scanner sc=new Scanner(System.in);
-	    System.out.print("Size of array: ");
-        int n=sc.nextInt();
-        System.out.print("Enter elements");
-        int arr[]=new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
-        }
-        int sum=0;
-        int count=0;
-        for(int i=0;i<n;i++){
-            if(arr[i]%3==0 && arr[i]%2==0){
-                count++;
-                sum+=arr[i];
-            }
-        }
-        System.out.print("The sum of number both divisible by 3 and even number is ");
-        float average=sum/count;
-        System.out.printf("%.2f",average);
-        
-        
-    }
-}
-Size of array: 5
-Enter elements2 4 6 18 24
-The sum of number both divisible by 3 and even number is 16.00
-
-/*
-find the power of given number without inbuilt method 
-function with parameters and and return Type
-*/
-import java.util.*;
- 
-    
-public class Main{
-    int powerofn(int num,int pow){
-        int sum=1;
-        for(int i=1;i<=pow;i++){
-	        sum*=num;
-	    }
-	    return sum;
-    }
-	public static void main(String[] args) {
-	    Scanner sc=new Scanner(System.in);
-	    int num=sc.nextInt();
-	    int pow=sc.nextInt();
-	    Main m=new Main();
-	    int ans=m.powerofn(num,pow);
-	    System.out.print(ans);
-    }
-    
-}
-
-2
-3
-8
-
-/*
-inheritance
-*/
-public class Main
+class Main
 {
-    static class ClassA{
-        void bloodA(){
-            System.out.println("A+ve");
-        }
+    public static void main(String args[]){
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
     }
-    static class ClassB extends ClassA{
-        void bloodb(){
-            System.out.println("b+ve");
-        }
-    }
-    static class Classc extends ClassB{
-        void bloodc(){
-            System.out.println("c+ve");
-        }
-    }
-    static class ClassD extends Classc{
-        void bloodd(){
-            System.out.println("d+ve");
-        }
-    }
-    
-	public static void main(String[] args) {
-		//System.out.println("Hello World");
-		ClassD yup=new ClassD();
-		yup.bloodd();
-		yup.bloodc();
-		yup.bloodb();
-		yup.bloodA();
-	}
 }
 
-d+ve
-c+ve
-b+ve
-A+ve
+// Output:
+// Eating
+// Barking
 
 
-TAIL RECURSION
-//TAIL RECURSION 
-import java.util.*;
-public class Main
+// 2) Multilevel Inheritance
+
+class GrandFather
 {
-    static void fun(int n){
-        if(n!=0){
-            System.out.print(n+" ");
-            fun(n-1);
-        }
+    void money(){
+        System.out.println("Money");
     }
-	public static void main(String[] args) {
-    Scanner sc=new Scanner(System.in);
-    int n=sc.nextInt();
-    fun(n);
-	}
 }
-OUTPUT
-9
-9 8 7 6 5 4 3 2 1 
 
-HEAD RECURSION
-//HEAD RECURSION 
-import java.util.*;
-public class Main
+class Father extends GrandFather
 {
-    static void fun(int n){
-        if(n!=0){
-            fun(n-1);
-            System.out.print(n+" ");
-            
-        }
-    }
-	public static void main(String[] args) {
-    Scanner sc=new Scanner(System.in);
-    int n=sc.nextInt();
-    fun(n);
-	}
-}
-
-9
-1 2 3 4 5 6 7 8 9 
-//FACTORIAL OPTIMIZED WAY
-import java.util.*;
-public class Main{
-    static int fact(int n){
-        int fact=1;
-        if(n==0 || n==1)
-        return 1
-        return n*fact(n-1);//multilying with value and also function call with fact(n-1)
-        //ANS IS STORED IN CONTAINER OF ANS
-    }
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int ans=fact(n);
-        System.out.print(ans);
+    void house(){
+        System.out.println("House");
     }
 }
-5
-120
 
-//FACTORIAL  RECURSION 
-import java.util.*;
-public class Main
+class Son extends Father
 {
-    static int  fact(int n){
-        int fact=1;
-        if(n!=0){
-        fact=n*fact(n-1);
-        }
-        return fact;
-        
+    void bike(){
+        System.out.println("Bike");
     }
-	public static void main(String[] args) {
-    Scanner sc=new Scanner(System.in);
-    int n=sc.nextInt();
-    int ans=fact(n);
-    System.out.print(ans);
-	}
 }
-5
-120
+
+class Main
+{
+    public static void main(String args[]){
+        Son s = new Son();
+        s.money();
+        s.house();
+        s.bike();
+    }
+}
+
+// Output:
+// Money
+// House
+// Bike
+
+
+// 3) Hierarchical Inheritance
+
+class Parent
+{
+    void property(){
+        System.out.println("Property");
+    }
+}
+
+class Son extends Parent
+{
+    void car(){
+        System.out.println("Car");
+    }
+}
+
+class Daughter extends Parent
+{
+    void gold(){
+        System.out.println("Gold");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Son s = new Son();
+        Daughter d = new Daughter();
+
+        s.property();
+        s.car();
+
+        d.property();
+        d.gold();
+    }
+}
+
+// Output:
+// Property
+// Car
+// Property
+// Gold
+
+
+// 4) Single Inheritance
+
+class College
+{
+    void education(){
+        System.out.println("Education");
+    }
+}
+
+class Student extends College
+{
+    void exam(){
+        System.out.println("Exam");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Student s = new Student();
+
+        s.exam();
+        s.education();
+    }
+}
+
+// Output:
+// Exam
+// Education
+
+
+// 5) Multilevel Inheritance
+
+class Country
+{
+    void countryName(){
+        System.out.println("India");
+    }
+}
+
+class State extends Country
+{
+    void stateName(){
+        System.out.println("Tamil Nadu");
+    }
+}
+
+class City extends State
+{
+    void cityName(){
+        System.out.println("Chennai");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        City c = new City();
+
+        c.cityName();
+        c.stateName();
+        c.countryName();
+    }
+}
+
+// Output:
+// Chennai
+// Tamil Nadu
+// India
+
+
+// 6) Hierarchical Inheritance
+
+class Vehicle
+{
+    void start(){
+        System.out.println("Vehicle Started");
+    }
+}
+
+class Car extends Vehicle
+{
+    void drive(){
+        System.out.println("Car Driving");
+    }
+}
+
+class Bike extends Vehicle
+{
+    void ride(){
+        System.out.println("Bike Riding");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Car c = new Car();
+        Bike b = new Bike();
+
+        c.start();
+        c.drive();
+
+        b.start();
+        b.ride();
+    }
+}
+
+// Output:
+// Vehicle Started
+// Car Driving
+// Vehicle Started
+// Bike Riding
+
+
+// 7) Multilevel Inheritance
+
+class Company
+{
+    void company(){
+        System.out.println("Google");
+    }
+}
+
+class Employee extends Company
+{
+    void employee(){
+        System.out.println("Employee");
+    }
+}
+
+class Manager extends Employee
+{
+    void manager(){
+        System.out.println("Manager");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Manager m = new Manager();
+
+        m.company();
+        m.manager();
+        m.employee();
+    }
+}
+
+// Output:
+// Google
+// Manager
+// Employee
+
+
+// 8) Single Inheritance
+
+class Mobile
+{
+    void call(){
+        System.out.println("Calling");
+    }
+}
+
+class Smartphone extends Mobile
+{
+    void internet(){
+        System.out.println("Internet");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Smartphone s = new Smartphone();
+
+        s.internet();
+        s.call();
+    }
+}
+
+// Output:
+// Internet
+// Calling
+
+
+// 9) Multilevel Inheritance
+
+class Human
+{
+    void breathe(){
+        System.out.println("Breathing");
+    }
+}
+
+class Student extends Human
+{
+    void study(){
+        System.out.println("Studying");
+    }
+}
+
+class Engineer extends Student
+{
+    void code(){
+        System.out.println("Coding");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Engineer e = new Engineer();
+
+        e.code();
+        e.breathe();
+        e.study();
+    }
+}
+
+// Output:
+// Coding
+// Breathing
+// Studying
+
+
+// 10) Hierarchical Inheritance
+
+class Bank
+{
+    void bankName(){
+        System.out.println("SBI");
+    }
+}
+
+class Savings extends Bank
+{
+    void savings(){
+        System.out.println("Savings Account");
+    }
+}
+
+class Current extends Bank
+{
+    void current(){
+        System.out.println("Current Account");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Savings s = new Savings();
+        Current c = new Current();
+
+        s.bankName();
+        c.bankName();
+
+        s.savings();
+        c.current();
+    }
+}
+
+// Output:
+// SBI
+// SBI
+// Savings Account
+// Current Account
